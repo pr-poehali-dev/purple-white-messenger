@@ -1,51 +1,43 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Icon from "@/components/ui/icon";
 
 const ChatWindow = () => {
   const messages = [
     {
       id: 1,
       text: "Привет! Как дела?",
-      time: "14:30",
+      time: "12:30",
       isOwn: false,
-      sender: "Анна",
     },
     {
       id: 2,
-      text: "Привет! Всё отлично, спасибо! А у тебя?",
-      time: "14:31",
+      text: "Привет! Всё отлично, спасибо! А у тебя как?",
+      time: "12:32",
       isOwn: true,
     },
     {
       id: 3,
-      text: "Тоже хорошо! Хотела обсудить проект",
-      time: "14:32",
+      text: "Тоже хорошо! Планы на выходные есть?",
+      time: "12:33",
       isOwn: false,
-      sender: "Анна",
     },
     {
       id: 4,
-      text: "Конечно, давай обсудим. Что именно интересует?",
-      time: "14:33",
+      text: "Да, думаю в кино сходить. Присоединишься?",
+      time: "12:35",
       isOwn: true,
-    },
-    {
-      id: 5,
-      text: "Мне нужно понять timeline и основные этапы",
-      time: "14:34",
-      isOwn: false,
-      sender: "Анна",
     },
   ];
 
   return (
     <div className="flex-1 flex flex-col bg-white">
       {/* Chat Header */}
-      <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-4 border-b">
+      <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-4 border-b border-purple-300">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center font-semibold">
-            А
+          <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center font-semibold">
+            АП
           </div>
           <div>
             <h2 className="font-semibold">Анна Петрова</h2>
@@ -91,7 +83,7 @@ const ChatWindow = () => {
             className="flex-1 border-purple-200 focus:border-purple-400"
           />
           <Button className="bg-purple-500 hover:bg-purple-600 text-white px-6">
-            📤
+            <Icon name="Send" size={18} />
           </Button>
         </div>
       </div>
